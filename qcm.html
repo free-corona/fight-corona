@@ -20,6 +20,18 @@
 </head>
 <!-- body -->
 <body>
+  <form>
+      <div>
+          <strong>كم عمرك؟</strong><br>
+          <input name="age" type="radio" value="0.2">أصغر من 40<br>
+          <input name="age" type="radio" value="0.5">40-50<br>
+          <input name="age" type="radio" value="1">51-60<br>
+          <input name="age" type="radio" value="1.5">61-70<br>
+          <input name="age" type="radio" value="2">71-80<br>
+          <input name="age" type="radio" value="3">أكبر من 80<br>
+          <button type="button" onclick="getValue();">التالي</button>
+      </div>
+  </form>
   <form id="qcm">
       <div>
           <strong>كم عمرك؟</strong><br>
@@ -165,7 +177,7 @@
       </div>
   </form>
   <script type="text/javascript">
-      document.getElementsByTagName("form")[0].style.display="none"
+      document.getElementById("qcm").style.display="none"
       var questions=document.getElementsByTagName("div");   //nselectioni les div(les questions kol) kol fi tab
       var moy=i=0;
           function getValue() {
@@ -176,7 +188,7 @@
               moy+=parseInt(questionValue)                  //n7ssb 9adech aandou min points
               alert(questionValue+moy);                     //il ligne hedha ntesti bih
           }
-      var moyG=moy/questions.length; // les points ily lamad'hom sur le nbr des questions 
+      var moyG=moy/questions.length; // les points ily lamad'hom sur le nbr des questions
       alert(moyG);//test
   </script>
 </body>
