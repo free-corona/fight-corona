@@ -98,21 +98,68 @@
               <dd>الاتصال مع أو تبادل سوائل الجسم-</dd>
               <dd>العيش في نفس الشقة-</dd>
           </dl>
-          <input name="contactConfirmedAffected" type="radio" value="1">نعم<br>
-          <input name="contactConfirmedAffected" type="radio" value="0">لا<br>
+          <input name="contactSuspectedAffected" type="radio" value="1">نعم<br>
+          <input name="contactSuspectedAffected" type="radio" value="0">لا<br>
+          <button type="button" onclick="getValue();">التالي</button>
+      </div>
+      <div>
+          <strong>هل عانيت من الحمى (فوق 38 درجة مئوية) خلال الـ 24 ساعة الماضية؟</strong><br>
+          <input name="Fever24H" type="radio" value="1">نعم<br>
+          <input name="Fever24H" type="radio" value="0">لا<br>
+          <button type="button" onclick="getValue();">التالي</button>
+      </div>
+      <div>
+          <strong>هل عانيت من حمى (أكثر من 38 درجة مئوية) خلال الأيام الأربعة الماضية؟</strong><br>
+          <input name="Fever4Days" type="radio" value="1">نعم<br>
+          <input name="Fever4Days" type="radio" value="0">لا<br>
+          <button type="button" onclick="getValue();">التالي</button>
+      </div>
+      <div>
+          <strong>هل لديك قشعريرة؟</strong><br>
+          <input name="shudder" type="radio" value="1">نعم<br>
+          <input name="shudder" type="radio" value="0">لا<br>
+          <button type="button" onclick="getValue();">التالي</button>
+      </div>
+      <div>
+          <strong>هل تشعر بالتعب أو الضعف؟</strong><br>
+          <input name="fatigue" type="radio" value="1">نعم<br>
+          <input name="fatigue" type="radio" value="0">لا<br>
+          <button type="button" onclick="getValue();">التالي</button>
+      </div>
+      <div>
+          <strong>هل لديك ألم في الأطراف؟</strong><br>
+          <input name="ExtremitiesPain" type="radio" value="1">نعم<br>
+          <input name="ExtremitiesPain" type="radio" value="0">لا<br>
+          <button type="button" onclick="getValue();">التالي</button>
+      </div>
+      <div>
+          <strong>هل لديك سعال جاف مستمر؟</strong><br>
+          <input name="cough" type="radio" value="1.5">نعم<br>
+          <input name="cough" type="radio" value="0">لا<br>
+          <button type="button" onclick="getValue();">التالي</button>
+      </div>
+      <div>
+          <strong>هل لديك صعوبة في التنفس؟</strong><br>
+          <input name="DifficultBreathing" type="radio" value="1.5">نعم<br>
+          <input name="DifficultBreathing" type="radio" value="0">لا<br>
+          <button type="button" onclick="getValue();">التالي</button>
+      </div>
+      <div>
+          <strong>هل لديك إسهال؟</strong><br>
+          <input name="Diarrhea" type="radio" value="0.3">نعم<br>
+          <input name="Diarrhea" type="radio" value="0">لا<br>
+          <button type="button" onclick="getValue();">التالي</button>
+      </div>
+      <div>
+          <strong>هل لديك التهاب في الحلق؟</strong><br>
+          <input name="SoreThroat" type="radio" value="1">نعم<br>
+          <input name="SoreThroat" type="radio" value="0">لا<br>
           <button type="button" onclick="getValue();">التالي</button>
       </div>
       <div>
           <strong></strong><br>
-          <input name="" type="radio" value=""><br>
-          <input name="" type="radio" value=""><br>
-          <input name="" type="radio" value=""><br>
-          <button type="button" onclick="getValue();">التالي</button>
-      </div>
-      <div>
-          <strong></strong><br>
-          <input name="" type="radio" value=""><br>
-          <input name="" type="radio" value=""><br>
+          <input name="" type="radio" value="1">نعم<br>
+          <input name="" type="radio" value="0">لا<br>
           <input name="" type="radio" value=""><br>
           <button type="button" onclick="getValue();">التالي</button>
       </div>
