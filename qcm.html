@@ -213,22 +213,20 @@
   </form>
   <script type="text/javascript">
       document.getElementById("qcm").style.display="none"
-      var questions=document.getElementsByTagName("div");   //nselectioni les div(les questions kol) kol fi tab
-      var moy=i=0;
           function StartTest() {
               document.getElementsByTagName("section")[0].style.display="none";
               document.getElementById("qcm").style.display="block";
           }
           function getValue() {
-              i++;
-              questions[i-1].style.display = "none";          //ki tjewb aal question yitna7a
-              questions[i].style.display = "block";           //ki tjew aal question youdhhrlik ily baadou bch tjewb aalih
-              var questionValue = questions[i-1].querySelector("input:checked").value;//hekhou il value t3 il reponse
-              moy+=parseInt(questionValue)                    //n7ssb 9adech aandou min points
-              alert(questionValue);                     //il ligne hedha ntesti bih
+              var questions=document.getElementsByTagName("div");   //nselectioni les div(les questions kol) kol fi tab
+              var moy=0;
+              for(var i=0;i<questions.length;i++) {
+                  var questionValue = questions[i].querySelector("input:checked").value;//hekhou il value t3 il reponse
+                  moy += parseInt(questionValue);                   //n7ssb 9adech aandou min points
+              }
+              var moyG=moy/questions.length; // les points ily lamad'hom sur le nbr des questions
+              alert(moyG);  //test
           }
-      var moyG=moy/questions.length; // les points ily lamad'hom sur le nbr des questions
-      alert(moyG);//test
   </script>
 </body>
 </html>
