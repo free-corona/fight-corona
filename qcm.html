@@ -171,9 +171,9 @@
           function getValue() {
               i++;
               questions[i-1].style.display = none;
-              questions.style.display = block;
-              var questionValue = questions[i].querySelector("input:checked").value;
-              moy+=parseInt(questionValue)*coiff[i]
+              questions[i].style.display = block;
+              var questionValue = questions[i-1].querySelector("input:checked").value;
+              moy+=parseInt(questionValue)
               alert(questionValue+moy);//il ligne hedha ntesti bih
           }
       moyG=moy/questions.length
