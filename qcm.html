@@ -224,6 +224,10 @@
       document.getElementById("qcm").style.display="none"
       var questions=document.getElementsByTagName("div");   //nselectioni les div(les questions kol) kol fi tab
       var moy=i=0;
+          function StartTest() {
+              document.getElementsByTagName("section")[0].style.display="none";
+              document.getElementById("qcm").style.display="block";
+          }
           function getValue() {
               i++;
               questions[i-1].style.display = "none";          //ki tjewb aal question yitna7a
