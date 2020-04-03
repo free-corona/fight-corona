@@ -165,18 +165,17 @@
       </div>
   </form>
   <script type="text/javascript">
-      var coiff=[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26];
-      var questions=document.getElementsByTagName("div");
+      var questions=document.getElementsByTagName("div");   //nselectioni les div(les questions kol) kol fi tab
       var moy=i=0;
           function getValue() {
               i++;
-              questions[i-1].style.display = none;
-              questions[i].style.display = block;
-              var questionValue = questions[i-1].querySelector("input:checked").value;
-              moy+=parseInt(questionValue)
-              alert(questionValue+moy);//il ligne hedha ntesti bih
+              questions[i-1].style.display = none;          //ki tjewb aal question yitna7a
+              questions[i].style.display = block;           //ki tjew aal question youdhhrlik ily baadou bch tjewb aalih
+              var questionValue = questions[i-1].querySelector("input:checked").value;//hekhou il value t3 il reponse
+              moy+=parseInt(questionValue)                  //n7ssb 9adech aandou min points
+              alert(questionValue+moy);                     //il ligne hedha ntesti bih
           }
-      var moyG=moy/questions.length;
+      var moyG=moy/questions.length; // les points ily lamad'hom sur aala 
       alert(moyG);//test
   </script>
 </body>
