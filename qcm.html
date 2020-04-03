@@ -169,13 +169,13 @@
       var moy=i=0;
           function getValue() {
               i++;
-              questions[i-1].style.display = none;          //ki tjewb aal question yitna7a
-              questions[i].style.display = block;           //ki tjew aal question youdhhrlik ily baadou bch tjewb aalih
+              questions[i-1].style.display = "none";          //ki tjewb aal question yitna7a
+              questions[i].style.display = "block";           //ki tjew aal question youdhhrlik ily baadou bch tjewb aalih
               var questionValue = questions[i-1].querySelector("input:checked").value;//hekhou il value t3 il reponse
               moy+=parseInt(questionValue)                  //n7ssb 9adech aandou min points
               alert(questionValue+moy);                     //il ligne hedha ntesti bih
           }
-      var moyG=moy/questions.length; // les points ily lamad'hom sur aala 
+      var moyG=moy/questions.length; // les points ily lamad'hom sur aala
       alert(moyG);//test
   </script>
 </body>
