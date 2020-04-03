@@ -15,17 +15,17 @@
   <form id="qcm">
       <div>
           <strong>كم عمرك؟</strong><br>
-          <input name="age" type="radio" value="<40">أصغر من 40<br>
-          <input name="age" type="radio" value="40-50">40-50<br>
-          <input name="age" type="radio" value="51-60">51-60<br>
-          <input name="age" type="radio" value="61-70">61-70<br>
-          <input name="age" type="radio" value="71-80">71-80<br>
-          <input name="age" type="radio" value=">80">أكبر من 80<br>
+          <input name="age" type="radio" value="0.2">أصغر من 40<br>
+          <input name="age" type="radio" value="0.5">40-50<br>
+          <input name="age" type="radio" value="1">51-60<br>
+          <input name="age" type="radio" value="1.5">61-70<br>
+          <input name="age" type="radio" value="2">71-80<br>
+          <input name="age" type="radio" value="3">أكبر من 80<br>
           <button type="button" onclick="getValue();">التالي</button>
       </div>
       <div>
           <strong>ما هو وضعك المعيشي الحالي؟</strong><br>
-          <input name="livingwith" type="radio" value="alone">أعيش بمفردي<br>
+          <input name="livingwith" type="radio" value="">أعيش بمفردي<br>
           <input name="livingwith" type="radio" value="withFamilly">أعيش مع العائلة في شقة مشتركة أو في منشأة مجتمعية تحت الإشراف<br>
           <button type="button" onclick="getValue();">التالي</button>
       </div>
@@ -60,12 +60,13 @@
   <script type="text/javascript">
       var coiff=[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26];
       var val=document.getElementsByTagName("input")
-      for(var i=0;i<val.length;i++){
+      /*for(var i=0;i<val.length;i++){
           document.getElementById(identifiant_de_ma_div).style.display = none;
           document.getElementById(identifiant_de_ma_div).style.display = block;
-          function getValue() {
-              var input = val[i].value;
-          }
+      } */
+      function getValue() {
+          var input = document.querySelector('input:checked').value;
+          alert(input)
       }
   </script>
 </body>
