@@ -13,30 +13,60 @@
 <!-- body -->
 <body>
   <form id="qcm">
-            <div>
-                <strong>كم عمرك؟</strong><br>
-                <input name="age" type="radio" value="<40">أصغر من 40<br>
-                <input name="age" type="radio" value="40-50">40-50<br>
-                <input name="age" type="radio" value="51-60">51-60<br>
-                <input name="age" type="radio" value="61-70">61-70<br>
-                <input name="age" type="radio" value="71-80">71-80<br>
-                <input name="age" type="radio" value=">80">أكبر من 80<br>
-            </div>
-            <div>
-                <strong>ما هو وضعك المعيشي الحالي؟</strong><br>
-                <input name="livingwith" type="radio" value="alone">أعيش بمفردي<br>
-                <input name="livingwith" type="radio" value="withFamilly">أعيش مع العائلة في شقة مشتركة أو في منشأة مجتمعية تحت الإشراف<br>
-            </div>
-            <div>
-                <strong>هل تعمل في أحد المجالات التالية؟</strong><br>
-                <input name="work" type="radio" value="medicalField">في المجال الطبي<br>
-                <input name="work" type="radio" value="CommunityFacility">في منشأة مجتمعية (مدرسة ، مركز رعاية نهارية ، جامعة ، منزل وما إلى ذلك)<br>
-                <input name="work" type="radio" value="other">لا ، في أي مما سبق.<br>
-            </div>
+      <div>
+          <strong>كم عمرك؟</strong><br>
+          <input name="age" type="radio" value="<40">أصغر من 40<br>
+          <input name="age" type="radio" value="40-50">40-50<br>
+          <input name="age" type="radio" value="51-60">51-60<br>
+          <input name="age" type="radio" value="61-70">61-70<br>
+          <input name="age" type="radio" value="71-80">71-80<br>
+          <input name="age" type="radio" value=">80">أكبر من 80<br>
+          <button type="button" onclick="getValue();">التالي</button>
+      </div>
+      <div>
+          <strong>ما هو وضعك المعيشي الحالي؟</strong><br>
+          <input name="livingwith" type="radio" value="alone">أعيش بمفردي<br>
+          <input name="livingwith" type="radio" value="withFamilly">أعيش مع العائلة في شقة مشتركة أو في منشأة مجتمعية تحت الإشراف<br>
+          <button type="button" onclick="getValue();">التالي</button>
+      </div>
+      <div>
+          <strong>هل تعمل في أحد المجالات التالية؟</strong><br>
+          <input name="work" type="radio" value="medicalField">في المجال الطبي<br>
+          <input name="work" type="radio" value="CommunityFacility">في منشأة مجتمعية (مدرسة ، مركز رعاية نهارية ، جامعة ، منزل وما إلى ذلك)<br>
+          <input name="work" type="radio" value="other">لا ، في أي مما سبق.<br>
+          <button type="button" onclick="getValue();">التالي</button>
+      </div>
+      <div>
+          <strong>هل تعمل في أحد المجالات التالية؟</strong><br>
+          <input name="work" type="radio" value="medicalField">في المجال الطبي<br>
+          <input name="work" type="radio" value="CommunityFacility">في منشأة مجتمعية (مدرسة ، مركز رعاية نهارية ، جامعة ، منزل وما إلى ذلك)<br>
+          <input name="work" type="radio" value="other">لا ، في أي مما سبق.<br>
+          <button type="button" onclick="getValue();">التالي</button>
+      </div>
+      <div>
+          <strong>هل تدخن؟</strong><br>
+          <input name="smoking" type="radio" value="yes">نعم<br>
+          <input name="smoking" type="radio" value="no">لا<br>
+          <button type="button" onclick="getValue();">التالي</button>
+      </div>
+      <div>
+          <strong></strong><br>
+          <input name="" type="radio" value=""><br>
+          <input name="" type="radio" value=""><br>
+          <input name="" type="radio" value=""><br>
+          <button type="button" onclick="getValue();">التالي</button>
+      </div>
   </form>
   <script type="text/javascript">
       var coiff=[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26];
-      
+      var val=document.getElementsByTagName("input")
+      for(var i=0;i<val.length;i++){
+          document.getElementById(identifiant_de_ma_div).style.display = none;
+          document.getElementById(identifiant_de_ma_div).style.display = block;
+          function getValue() {
+              var input = val[i].value;
+          }
+      }
   </script>
 </body>
 </html>
