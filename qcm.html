@@ -222,7 +222,7 @@
               var moy=0;
               for(var i=0;i<questions.length;i++) {
                   var questionValue = questions[i].querySelector("input:checked").value;//hekhou il value t3 il reponse
-                  moy += parseInt(questionValue);                   //n7ssb 9adech aandou min points
+                  moy = moy+ parseInt(questionValue);                   //n7ssb 9adech aandou min points
               }
               var moyG=moy/questions.length; // les points ily lamad'hom sur le nbr des questions
               alert(moyG);  //test
