@@ -106,12 +106,15 @@
         <input name="age" type="radio" value="0.6">61-70<br>
         <input name="age" type="radio" value="0.7">71-80<br>
         <input name="age" type="radio" value="0.8">أكبر من 80<br>
+        <button type="button" onclick="next();">التالي</button>
     </div>
     <div>
         <strong>ما هو وضعك المعيشي الحالي؟</strong><br>
         <input name="livingwith" type="radio" value="0.1">أعيش بمفردي<br>
         <input name="livingwith" type="radio" value="0.4">أعيش مع العائلة في شقة مشتركة أو في منشأة مجتمعية تحت
         الإشراف<br>
+        <button type="button" onclick="next();">التالي</button>
+        <button type="button" onclick="prev();">السابق</button>
     </div>
     <div>
         <strong>هل تعمل في أحد المجالات التالية؟</strong><br>
@@ -119,16 +122,22 @@
         <input name="work" type="radio" value="0.5">في منشأة مجتمعية (مدرسة ، مركز رعاية نهارية ، جامعة ، منزل وما إلى
         ذلك)<br>
         <input name="work" type="radio" value="0.1">لا ، في أي مما سبق.<br>
+        <button type="button" onclick="next();">التالي</button>
+        <button type="button" onclick="prev();">السابق</button>
     </div>
     <div>
         <strong>هل تدخن؟</strong><br>
         <input name="smoking" type="radio" value="0.3">نعم<br>
         <input name="smoking" type="radio" value="0.1">لا<br>
+        <button type="button" onclick="next();">التالي</button>
+        <button type="button" onclick="prev();">السابق</button>
     </div>
     <div>
         <strong>هل كنت مسافرًا خلال الأسابيع الأربعة الماضية؟ (داخل بلدك أو خارجها)</strong><br>
         <input name="trip" type="radio" value="0.5">نعم<br>
         <input name="trip" type="radio" value="0.1">لا<br>
+        <button type="button" onclick="next();">التالي</button>
+        <button type="button" onclick="prev();">السابق</button>
     </div>
     <div>
         <strong>هل زرت أحد البلدان التالية؟</strong><br>
@@ -142,6 +151,8 @@
         <input name="visitedCountry" type="radio" value="0.7">إسبانيا<br>
         <input name="visitedCountry" type="radio" value="0.7">الولايات المتحدة الأمريكية<br>
         <input name="visitedCountry" type="radio" value="0.1">لم أذهب إلى أي من البلدان المذكورة أعلاه<br>
+        <button type="button" onclick="next();">التالي</button>
+        <button type="button" onclick="prev();">السابق</button>
     </div>
     <div>
         <strong>هل كان لديك اتصال وثيق بحالة مؤكدة؟</strong><br>
@@ -155,6 +166,8 @@
         </dl>
         <input name="contactConfirmedAffected" type="radio" value="1">نعم<br>
         <input name="contactConfirmedAffected" type="radio" value="0.1">لا<br>
+        <button type="button" onclick="next();">التالي</button>
+        <button type="button" onclick="prev();">السابق</button>
     </div>
     <div>
         <strong>هل كان لديك اتصال وثيق بحالة مشبوهة؟</strong><br>
@@ -174,95 +187,131 @@
         </dl>
         <input name="contactSuspectedAffected" type="radio" value="0.7">نعم<br>
         <input name="contactSuspectedAffected" type="radio" value="0.1">لا<br>
+        <button type="button" onclick="next();">التالي</button>
+        <button type="button" onclick="prev();">السابق</button>
     </div>
     <div>
         <strong>هل عانيت من الحمى (فوق 38 درجة مئوية) خلال الـ 24 ساعة الماضية؟</strong><br>
         <input name="Fever24H" type="radio" value="0.5">نعم<br>
         <input name="Fever24H" type="radio" value="0.05">لا<br>
+        <button type="button" onclick="next();">التالي</button>
+        <button type="button" onclick="prev();">السابق</button>
     </div>
     <div>
         <strong>هل عانيت من حمى (أكثر من 38 درجة مئوية) خلال الأيام الأربعة الماضية؟</strong><br>
         <input name="Fever4Days" type="radio" value="0.4">نعم<br>
         <input name="Fever4Days" type="radio" value="0.07">لا<br>
+        <button type="button" onclick="next();">التالي</button>
+        <button type="button" onclick="prev();">السابق</button>
     </div>
     <div>
         <strong>هل لديك قشعريرة؟</strong><br>
         <input name="shudder" type="radio" value="0.6">نعم<br>
         <input name="shudder" type="radio" value="0.1">لا<br>
+        <button type="button" onclick="next();">التالي</button>
+        <button type="button" onclick="prev();">السابق</button>
     </div>
     <div>
         <strong>هل تشعر بالتعب أو الضعف؟</strong><br>
         <input name="fatigue" type="radio" value="0.7">نعم<br>
         <input name="fatigue" type="radio" value="0.1">لا<br>
+        <button type="button" onclick="next();">التالي</button>
+        <button type="button" onclick="prev();">السابق</button>
     </div>
     <div>
         <strong>هل لديك ألم في الأطراف؟</strong><br>
         <input name="ExtremitiesPain" type="radio" value="0.6">نعم<br>
         <input name="ExtremitiesPain" type="radio" value="0.1">لا<br>
+        <button type="button" onclick="next();">التالي</button>
+        <button type="button" onclick="prev();">السابق</button>
     </div>
     <div>
         <strong>هل لديك سعال جاف مستمر؟</strong><br>
         <input name="cough" type="radio" value="0.8">نعم<br>
         <input name="cough" type="radio" value="0.025">لا<br>
+        <button type="button" onclick="next();">التالي</button>
+        <button type="button" onclick="prev();">السابق</button>
     </div>
     <div>
         <strong>هل لديك صعوبة في التنفس؟</strong><br>
         <input name="DifficultBreathing" type="radio" value="0.9">نعم<br>
         <input name="DifficultBreathing" type="radio" value="0.01">لا<br>
+        <button type="button" onclick="next();">التالي</button>
+        <button type="button" onclick="prev();">السابق</button>
     </div>
     <div>
         <strong>هل لديك إسهال؟</strong><br>
         <input name="Diarrhea" type="radio" value="0.3">نعم<br>
         <input name="Diarrhea" type="radio" value="0.1">لا<br>
+        <button type="button" onclick="next();">التالي</button>
+        <button type="button" onclick="prev();">السابق</button>
     </div>
     <div>
         <strong>هل لديك التهاب في الحلق؟</strong><br>
         <input name="SoreThroat" type="radio" value="0.5">نعم<br>
         <input name="SoreThroat" type="radio" value="0.05">لا<br>
+        <button type="button" onclick="next();">التالي</button>
+        <button type="button" onclick="prev();">السابق</button>
     </div>
     <div>
         <strong>هل أصبت بصداع؟ </strong><br>
         <input name="headache" type="radio" value="0.3">نعم<br>
         <input name="headache" type="radio" value="0.1">لا<br>
+        <button type="button" onclick="next();">التالي</button>
+        <button type="button" onclick="prev();">السابق</button>
     </div>
     <div><strong>هل تشعر بضيق في التنفس بشكل أسرع من المعتاد؟</strong><br>
         <input name="asthma" type="radio" value="0.9">نعم<br>
         <input name="asthma" type="radio" value="0.07">لا<br>
+        <button type="button" onclick="next();">التالي</button>
+        <button type="button" onclick="prev();">السابق</button>
     </div>
     <div><strong> هل تعاني من أمراض رئوية مزمنة؟</strong><br>
         <input name="PulmonaryDiseases" type="radio" value="0.3">نعم<br>
         <input name="PulmonaryDiseases" type="radio" value="0.2">لا<br>
         <input name="PulmonaryDiseases" type="radio" value="0.2">غير معروف<br>
+        <button type="button" onclick="next();">التالي</button>
+        <button type="button" onclick="prev();">السابق</button>
     </div>
     <div>
         <strong>هل تعاني من مرض السكري؟</strong><br>
         <input name="Diabetes" type="radio" value="0.4">نعم<br>
         <input name="Diabetes" type="radio" value="0.2">لا<br>
         <input name="Diabetes" type="radio" value="0.3">غير معروف<br>
+        <button type="button" onclick="next();">التالي</button>
+        <button type="button" onclick="prev();">السابق</button>
     </div>
     <div>
         <strong>هل تعاني من مرض في القلب؟</strong><br>
         <input name="HeartDiseases" type="radio" value="0.3">نعم<br>
         <input name="HeartDiseases" type="radio" value="0.1">لا<br>
         <input name="HeartDiseases" type="radio" value="0.2">غير معروف<br>
+        <button type="button" onclick="next();">التالي</button>
+        <button type="button" onclick="prev();">السابق</button>
     </div>
     <div>
         <strong>هل تعاني من البدانة؟</strong><br>
         <input name="Obesity" type="radio" value="0.3">نعم<br>
         <input name="Obesity" type="radio" value="0.05">لا<br>
         <input name="Obesity" type="radio" value="0.025">غير معروف<br>
+        <button type="button" onclick="next();">التالي</button>
+        <button type="button" onclick="prev();">السابق</button>
     </div>
     <div>
         <strong>هل أنت حامل؟</strong><br>
         <input name="Pregnancy" type="radio" value="0.2">نعم<br>
         <input name="Pregnancy" type="radio" value="0.1">لا<br>
         <input name="Pregnancy" type="radio" value="0.15">غير معروف<br>
+        <button type="button" onclick="next();">التالي</button>
+        <button type="button" onclick="prev();">السابق</button>
     </div>
     <div>
         <strong>هل تتناول حاليًا المنشطات؟</strong><br>
         <input name="AnabolicSteroids" type="radio" value="0.3">نعم<br>
         <input name="AnabolicSteroids" type="radio" value="0.2">لا<br>
         <input name="AnabolicSteroids" type="radio" value="0.25">غير معروف<br>
+        <button type="button" onclick="next();">التالي</button>
+        <button type="button" onclick="prev();">السابق</button>
     </div>
     <div>
         <strong>هل تتناول حاليًا مثبطات المناعة؟</strong><br>
@@ -271,16 +320,21 @@
         <input name="Immunosuppressants" type="radio" value="0.2">نعم<br>
         <input name="Immunosuppressants" type="radio" value="0.1">لا<br>
         <input name="Immunosuppressants" type="radio" value="0.15">غير معروف<br>
+        <button type="button" onclick="next();">التالي</button>
+        <button type="button" onclick="prev();">السابق</button>
     </div>
     <div>
         <strong>هل تم تلقيحك ضد الأنفلونزا بين أكتوبر 2019 واليوم؟</strong><br>
         <input name="InfluenzaVaccine" type="radio" value="0.3">نعم<br>
         <input name="InfluenzaVaccine" type="radio" value="0.1">لا<br>
+        <button type="button" onclick="next();">التالي</button>
+        <button type="button" onclick="prev();">السابق</button>
     </div>
     <div>
         <strong>هل فقدت حاسة الشم أو التذوق أو شعرت بتغيير فيهما؟</strong><br>
         <input name="Olfactory/TasteRegression" type="radio" value="0.5">نعم<br>
         <input name="Olfactory/TasteRegression" type="radio" value="0.1">لا<br>
+        <button type="button" onclick="prev();">السابق</button>
     </div>
     <button type="button" onclick="getValue();">النتيجة</button>
 </form>
@@ -296,9 +350,11 @@
       var num = 0;
 
       function next () {
-          questions[ ( num ) % 28 ].style.display = "none";
-          questions[ ( num + 1 ) % 28 ].style.display = "block";
-          num ++;
+          if ( isNaN ( questions[ num ].querySelector ( "input:checked" ).value ) === false ) {
+              questions[ ( num ) % 28 ].style.display = "none";
+              questions[ ( num + 1 ) % 28 ].style.display = "block";
+              num ++;
+          }
       }
 
       function prev () {
@@ -313,7 +369,7 @@
               var questionValue = questions[ i ].querySelector ( "input:checked" ).value;//hekhou il value t3 il reponse
               moy = moy + parseFloat ( questionValue );
           }                  //n7ssb 9adech aandou min points
-          var moyG = ( moy / 28 ) * 100
+          var moyG = ( moy / 28 ) * 100;
           if ( moyG >= 50 ) {
               alert ( " نسبة إصابتك هي: " + moyG + "%\n" + "تواصل معنا على أرقام منطقتك المحددة\n" +
                   "يبدو أنك في دائرة الناس المعرضين للخطورة المعينة. \n" +
