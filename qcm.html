@@ -354,8 +354,7 @@
         questions[ ( num - 1 ) % 28 ].style.display = "block";
         num --;
     }
-
-<<<<<<< HEAD
+    
     function next () {
         if ( isNaN ( questions[ num ].querySelector ( "input:checked" ).value ) === false ) {
             questions[ ( num ) % 28 ].style.display = "none";
@@ -364,16 +363,6 @@
         }
         else {alert("أجب عن السؤال قبل المرور إلى الموالي !");}
     }
-=======
-      function next () {
-          if ( isNaN ( questions[ num ].querySelector ( "input:checked" ).value ) === false ) {
-              questions[ ( num ) % 28 ].style.display = "none";
-              questions[ ( num + 1 ) % 28 ].style.display = "block";
-              num ++;
-          }
-          else {alert("أجب عن السؤال قبل المرور إلى الموالي !");}
-      }
->>>>>>> 8876600cd5abde8045ec70b2791ba9951e8e54ef
 
     function getValue () {
         var moy;
