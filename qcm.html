@@ -349,18 +349,18 @@
 
       var num = 0;
 
+      function prev () {
+          questions[ ( num ) % 28 ].style.display = "none";
+          questions[ ( num - 1 ) % 28 ].style.display = "block";
+          num --;
+      }
+
       function next () {
           if ( isNaN ( questions[ num ].querySelector ( "input:checked" ).value ) === false ) {
               questions[ ( num ) % 28 ].style.display = "none";
               questions[ ( num + 1 ) % 28 ].style.display = "block";
               num ++;
           }
-      }
-
-      function prev () {
-          questions[ ( num ) % 28 ].style.display = "none";
-          questions[ ( num - 1 ) % 28 ].style.display = "block";
-          num --;
       }
 
       function getValue () {
