@@ -347,29 +347,33 @@
           document.getElementById ( "qcm" ).style.display = "block";
       }
 
-      var num = 0;
+      let num = 0;
 
       function prev () {
-          questions[ ( num ) % 28 ].style.display = "none";
+          for ( let i=0; i<=num; i++) {
+              questions[ ( i ) % 28 ].style.display = "none";
+          }
           questions[ ( num - 1 ) % 28 ].style.display = "block";
           num --;
       }
 
       function next () {
           if ( isNaN ( questions[ num ].querySelector ( "input:checked" ).value ) === false ) {
-              questions[ ( num ) % 28 ].style.display = "none";
+              for ( let i=0; i<=num; i++) {
+                  questions[ ( i ) % 28 ].style.display = "none";
+              }
               questions[ ( num + 1 ) % 28 ].style.display = "block";
               num ++;
           }
       }
 
       function getValue () {
-          var moy;
-          for ( var i = 0 , moy = 0 ; i < questions.length ; i ++ ) {
-              var questionValue = questions[ i ].querySelector ( "input:checked" ).value;//hekhou il value t3 il reponse
+          let i = 0 , moy = 0;
+          for ( ; i < questions.length ; i ++ ) {
+              const questionValue = questions[ i ].querySelector ( "input:checked" ).value;//hekhou il value t3 il reponse
               moy = moy + parseFloat ( questionValue );
           }                  //n7ssb 9adech aandou min points
-          var moyG = ( moy / 28 ) * 100;
+          const moyG = ( moy / 28 ) * 100;
           if ( moyG >= 50 ) {
               alert ( " نسبة إصابتك هي: " + moyG + "%\n" + "تواصل معنا على أرقام منطقتك المحددة\n" +
                   "يبدو أنك في دائرة الناس المعرضين للخطورة المعينة. \n" +
