@@ -239,7 +239,7 @@
               var moy;
               for(var i=0,moy=0;i<questions.length;i++) {
                   var questionValue = questions[i].querySelector("input:checked").value;//hekhou il value t3 il reponse
-                  moy = moy+ parseInt(questionValue); }                  //n7ssb 9adech aandou min points
+                  moy = moy+ parseFloat(questionValue); }                  //n7ssb 9adech aandou min points
 
               if(moy/28 >=0.5){alert(moy/28+"تواصل معنا على أرقام منطقتك المحددة\n" +
                       "يبدو أنك في دائرة الناس المعرضين للخطورة المعينة. \n" +
