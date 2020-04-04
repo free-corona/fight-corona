@@ -20,19 +20,20 @@
         section  {background-image: url("FREE CORONA (6).png"); height: 650px;}
         button{ margin-left: 10px;}
                    @media (min-width:700px) {
-          section{
+         section #introduction{
             background-image: url("FREE CORONA (6).png"); height: 700px;
           }
         }
         @media (max-width:700px) {
-          section{
+          section #introduction{
           background-image: url("FREE C.png"); height: 700px;
 }}
     </style>
 </head>
 <!-- body -->
 <body>
-  <section>
+ <article id="test">
+  <section id="introduction">
     <br>
       <h4>نضع بين أيديكم أعزاءنا، تطبيقنا الأولي يتيح لك الحصول على "تقييم أولي" لاحتمالية أن تكون معرضا للإصابة بفيروس كورونا المستجد.</h4>
 <br>
@@ -47,7 +48,8 @@
       <br>
       <button type="button" onclick="StartTest();">إبدأ الفحص</button>
   </section>
-  <form id="qcm">
+  <section id="QCM">
+     <form>
       <div>
           <strong>كم عمرك؟</strong><br>
           <input name="age" type="radio" value="0.1">أصغر من 40<br>
@@ -226,30 +228,61 @@
       <input name="Olfactory/TasteRegression" type="radio" value="0.5">نعم<br>
       <input name="Olfactory/TasteRegression" type="radio" value="0.1">لا<br>
   </div>
-      <button type="button" onclick="getValue();">النتيجة</button>
-  </form>
+      <button type="button" onclick="getResult();">النتيجة</button>
+   </form>
+  </section>
+  <section id="result">
+      <div id="neg" style="background-color: #34ce57;color: #ffffff;text-align: center;">
+          <bold>من فضلك ابق في المنزل</bold>
+          <strong></strong>
+          <p>في الوقت الحالي أنت لست بحاجة لأي مساعدة طبية, من فضلك قم باحتياطاتك المعتادة</p>
+      </div>
+      <div id="pos" style="background-color: #e83e8c;color: #ffffff;text-align: center;">
+          <bold>تواصل معنا على أرقام منطقتك المحددة</bold>
+          <strong></strong>
+          <p>يبدو أنك في دائرة الناس المعرضين للخطورة المعينة.<br>
+              لربما يجب عليك الاتصال بالخط الساخن الموجود في منطقتك للخضوع لفحص محدد .<br>
+              إذا كنت تود الخروج من منزلك دع مسافة 2 متر بينك وبين الأشخاص المقابلين وحاول كبح السعال.حاول أن تبقى في المنزل وتجنب مخالطة الآخرين.
+          </p>
+      </div>
+
+  </section>
+ </article>
   <script type="text/javascript">
-      document.getElementById("qcm").style.display="none"
+      document.getElementById("QCM").style.display="none"
+      document.getElementById("result").style.display="none"
           function StartTest() {
-              document.getElementsByTagName("section")[0].style.display="none";
-              document.getElementById("qcm").style.display="block";
+              document.getElementById("introduction").style.display="none";
+              document.getElementById("QCM").style.display="block";
           }
-          function getValue() {
-              var questions=document.getElementsByTagName("div");   //nselectioni les div(les questions kol) kol fi tab
+          function getResult() {
+              var questions=document.querySelectorAll("#QCM div");  //nselectioni les div(les questions kol) kol fi tab
               var moy;
               for(var i=0,moy=0;i<questions.length;i++) {
                   var questionValue = questions[i].querySelector("input:checked").value;//hekhou il value t3 il reponse
-                  moy = moy+ parseFloat(questionValue); }                  //n7ssb 9adech aandou min points
-
-              if(moy/28 >=0.5){alert(moy/28+"تواصل معنا على أرقام منطقتك المحددة\n" +
+                  moy += parseFloat(questionValue);                   //n7ssb 9adech aandou min points
+              }
+              document.getElementById("QCM").style.display="none";
+              var G=((moy/28)*100);
+              if(G>=50)
+              {
+                  document.querySelector("#pos strong").innerHTML="نسبة إصابتك هي : "+G+"%";
+                  document.getElementById("pos").style.display="block";
+              }
+              else{
+                  document.querySelector("#neg strong").innerHTML="نسبة إصابتك هي : "+G+"%";
+                  document.getElementById("neg").style.display="block";
+              }
+          }
+              /*if(moyG>=50){alert("نسبة إصابتك هي: "+ moyG+ "\n"+"تواصل معنا على أرقام منطقتك المحددة\n" +
                       "يبدو أنك في دائرة الناس المعرضين للخطورة المعينة. \n" +
                       "لربما يجب عليك الاتصال بالخط الساخن الموجود في منطقتك للخضوع لفحص محدد .\n" +
                       "إذا كنت تود الخروج من منزلك دع مسافة 2 متر بينك وبين الأشخاص المقابلين وحاول كبح السعال.حاول أن تبقى في المنزل وتجنب مخالطة الآخرين.\n");}
 
-              else {alert(moy/28+"من فضلك ابق في المنزل\n" +
+              else {alert("نسبة إصابتك هي: "+ moyG +"\n"+"من فضلك ابق في المنزل\n" +
                       "في الوقت الحالي أنت لست بحاجة لأي مساعدة طبية:\n" +
                       "من فضلك قم باحتياطاتك المعتادة\n");}
-              }
+              */
   </script>
 </body>
 </html>
